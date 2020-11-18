@@ -1,0 +1,180 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+
+    defaultConfig {
+        applicationId "com.abkhrr.dipaygallery"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://io-idcoding.tech/\""
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", "\"https://io-idcoding.tech/\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+dependencies {
+
+// FileTree and Jar
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin Version
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // ANDROID TEST
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test:core:1.3.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //ANDROIDX
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.google.android.material:material:1.2.1'
+
+    // Kotlin-x
+    implementation 'androidx.core:core-ktx:1.3.2'
+
+    // ANDROID WORK RUN-TIMER
+    implementation 'androidx.work:work-runtime:2.4.0'
+
+    // ROUNDED IMAGE
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    // RX_JAVA CONVERTER
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    // RETROFIT
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+
+    // OK-HTTP
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+    // Android Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Dialog
+    implementation 'com.afollestad.material-dialogs:core:3.2.1'
+
+    // ViewModel and Livedata
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-beta01"
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+
+    // Room database
+    implementation 'androidx.room:room-ktx:2.2.5'
+    kapt 'androidx.room:room-compiler:2.2.5'
+
+    // GLIDE LIBRARY
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // ANDROID FLEX-BOX
+    implementation 'com.google.android:flexbox:1.0.0'
+
+    // ANDROID S_DP and S_SP
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    // LOTTIE AND OTHER ANIMATION PLAYER
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+
+    // Gif drawable
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    // Animation on Intent
+    implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
+
+    // Text Justify
+    implementation 'com.codesgood:justifiedtextview:1.1.0'
+
+    // Date Edit Text
+    implementation 'com.github.salahamassi:android-mask-date-editText:v1.02'
+    implementation 'com.google.guava:guava:28.2-android'
+
+    // Locale Helper
+    implementation 'com.zeugmasolutions.localehelper:locale-helper-android:1.0.2'
+
+    // Easy Permission
+    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    // File Picker
+    implementation 'com.vincent.filepicker:MultiTypeFilePicker:1.0.7'
+
+    // Image Picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.2.0'
+    // for experimental rx picker
+    implementation 'com.github.esafirm.android-image-picker:rximagepicker:2.2.0'
+
+    // Image Picker 2
+    implementation 'com.github.dhaval2404:imagepicker:1.6'
+
+    // Custom Tabs Chrome
+    implementation "androidx.browser:browser:1.2.0"
+
+    // Coil for image loading
+    implementation 'io.coil-kt:coil:0.9.5'
+
+    // Custom Toast
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+}

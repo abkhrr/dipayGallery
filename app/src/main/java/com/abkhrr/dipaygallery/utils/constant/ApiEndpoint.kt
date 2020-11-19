@@ -1,4 +1,4 @@
-package com.abkhrr.dipaygallery.data.source.remote.network
+package com.abkhrr.dipaygallery.utils.constant
 
 object ApiEndpoint {
 

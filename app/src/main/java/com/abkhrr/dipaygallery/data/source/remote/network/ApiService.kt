@@ -3,6 +3,7 @@ package com.abkhrr.dipaygallery.data.source.remote.network
 import com.abkhrr.dipaygallery.data.model.api.ApiCallback
 import com.abkhrr.dipaygallery.data.model.api.ApiStringResponse
 import com.abkhrr.dipaygallery.data.model.api.GalleryApi
+import com.abkhrr.dipaygallery.utils.constant.ApiEndpoint
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path

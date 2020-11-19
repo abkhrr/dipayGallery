@@ -1,4 +1,4 @@
-package com.abkhrr.dipaygallery.data.model.room
+package com.abkhrr.dipaygallery.data.source.local.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

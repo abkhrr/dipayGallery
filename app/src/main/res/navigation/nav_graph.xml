@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.abkhrr.dipaygallery.presentation.main.home.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/to_galleryDetailsFragment"
+            app:destination="@id/galleryDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/galleryDetailsFragment"
+        android:name="com.abkhrr.dipaygallery.presentation.main.galleryDetail.FragmentGalleryDetail"
+        android:label="fragment_gallery_details"
+        tools:layout="@layout/fragment_gallery_detail">
+
+        <argument
+            android:name="gallery"
+            app:argType="com.abkhrr.dipaygallery.presentation.main.shared.GalleryDataItems" />
+
+    </fragment>
+
+</navigation>

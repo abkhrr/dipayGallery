@@ -126,7 +126,8 @@ dependencies {
 
     // GLIDE LIBRARY
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     // ANDROID FLEX-BOX
     implementation 'com.google.android:flexbox:1.0.0'
@@ -177,4 +178,13 @@ dependencies {
 
     // Custom Toast
     implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+    // EXO PLAYER AND VIDEO CACHE
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
+    implementation 'com.danikula:videocache:2.7.0'
+
+    implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.7'
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
 }

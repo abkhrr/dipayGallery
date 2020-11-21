@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="gallery"
+            type="com.abkhrr.dipaygallery.domain.dto.db.Gallery" />
+
+        <variable
+            name="item"
+            type="com.abkhrr.dipaygallery.presentation.main.shared.GalleryItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/listCoverGallery"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:imageUrl="@{gallery.path}"
+            android:onClick="@{() -> item.onItemClick()}"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/two" />
+
+        <ImageView
+            android:id="@+id/actionPlay"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:src="@drawable/play24px"
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+</layout>

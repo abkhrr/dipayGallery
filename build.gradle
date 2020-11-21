@@ -1,10 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version          = "1.4.10"
-    ext.daggerVersion           = '2.27'
+    ext.kotlin_version          = '1.4.10'
+    ext.daggerVersion           = '2.28.3'
     ext.okHttpVersion           = '4.4.0'
     ext.glideVersion            = '4.10.0'
-    ext.retrofitVersion         = '2.7.2'
+    ext.retrofitVersion         = '2.9.0'
     ext.rxJavaVersion           = '2.2.2'
     ext.rxJavaAndroidVersion    = '2.1.0'
     ext.lifecycle_version       = '1.1.1'

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DipayGallery</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_screen">We do not have anything\nhere right now.</string>
+    <string name="title_home">DipayGallery Apps</string>
+    <string name="title_activity_dipay_camera">ActivityDipayCamera</string>
 </resources>

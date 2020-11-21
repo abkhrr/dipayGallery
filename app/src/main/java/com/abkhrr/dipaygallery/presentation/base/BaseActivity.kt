@@ -17,24 +17,11 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
     @Inject
     lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
-    /**
-     * Override for set binding variable
-     *
-     * @return variable id
-     */
     abstract val bindingVariable: Int
 
-    /**
-     * @return layout resource id
-     */
     @get:LayoutRes
     abstract val layoutId: Int
 
-    /**
-     * Override for set view dto
-     *
-     * @return view dto instance
-     */
     abstract val viewModel: V
 
     override fun onCreate(savedInstanceState: Bundle?) {

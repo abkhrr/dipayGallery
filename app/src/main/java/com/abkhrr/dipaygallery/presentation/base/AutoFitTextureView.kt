@@ -10,8 +10,8 @@ class AutoFitTextureView(context: Context?, attrs: AttributeSet?, defStyle: Int)
     private var mRatioWidth = 0
     private var mRatioHeight = 0
 
-    constructor(context: Context?) : this(context, null) {}
-    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0) {}
+    constructor(context: Context?) : this(context, null)
+    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
 
     fun setAspectRatio(width: Int, height: Int) {
         require(!(width < 0 || height < 0)) { "Size cannot be negative." }

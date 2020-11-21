@@ -12,9 +12,6 @@ interface GalleryDao {
     @Delete
     suspend fun delete(gallery: Gallery)
 
-    @Query("SELECT * FROM gallery WHERE id = :id")
-    suspend fun getGalleryById(id: Int): Gallery
-
     @Query("SELECT * FROM gallery")
     fun getAllGallery(): LiveData<List<Gallery>>
 }

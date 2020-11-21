@@ -8,5 +8,4 @@ interface GalleryDataSource {
     fun getAllGallery(): LiveData<List<Gallery>>
     suspend fun insert(gallery: Gallery)
     suspend fun delete(gallery: Gallery)
-    suspend fun getGalleryById(id: Int): GalleryResult<Gallery>
 }

@@ -24,8 +24,6 @@ class FragmentGalleryDetail : BaseFragment<FragmentGalleryDetailBinding, SharedV
     @Inject
     lateinit var factory: ViewModelFactory
 
-    private var sharedViewModel: SharedViewModel? = null
-
     override val bindingVariable: Int
         get() = BR.viewModel
 
@@ -35,12 +33,7 @@ class FragmentGalleryDetail : BaseFragment<FragmentGalleryDetailBinding, SharedV
     private var galleryDataItem: GalleryDataItems? = null
 
     override val viewModel: SharedViewModel
-        get() {
-            sharedViewModel = ViewModelProvider(this, factory).get(
-                SharedViewModel::class.java
-            )
-            return sharedViewModel as SharedViewModel
-        }
+        get() = ViewModelProvider(this,factory).get(SharedViewModel::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

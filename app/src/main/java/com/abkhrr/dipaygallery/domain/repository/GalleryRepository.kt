@@ -15,12 +15,4 @@ class GalleryRepository @Inject constructor(private val mAppDatabase: AppDatabas
 
     override suspend fun delete(gallery: Gallery) = mAppDatabase.galleryDao().delete(gallery)
 
-    override suspend fun getGalleryById(id: Int): GalleryResult<Gallery> {
-        return try {
-            GalleryResult.Success(mAppDatabase.galleryDao().getGalleryById(id))
-        } catch (e: Exception) {
-            GalleryResult.Error(e.localizedMessage)
-        }
-    }
-
 }

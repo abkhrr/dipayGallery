@@ -36,8 +36,6 @@ class FragmentHome : BaseFragment<FragmentHomeBinding, SharedViewModel>(),
 
     private lateinit var galleryRecyclerViewAdapter: GalleryRecyclerViewAdapter
 
-    private var sharedViewModel: SharedViewModel? = null
-
     override val bindingVariable: Int
         get() = BR.viewModel
 
@@ -45,12 +43,7 @@ class FragmentHome : BaseFragment<FragmentHomeBinding, SharedViewModel>(),
         get() = R.layout.fragment_home
 
     override val viewModel: SharedViewModel
-        get() {
-            sharedViewModel = ViewModelProvider(this, factory).get(
-                SharedViewModel::class.java
-            )
-            return sharedViewModel as SharedViewModel
-        }
+        get() = ViewModelProvider(this,factory).get(SharedViewModel::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

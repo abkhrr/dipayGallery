@@ -2,7 +2,6 @@ package com.abkhrr.dipaygallery.presentation.main.camera
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.content.res.ColorStateList
 import android.content.res.Configuration
 import android.graphics.ImageFormat
 import android.graphics.SurfaceTexture

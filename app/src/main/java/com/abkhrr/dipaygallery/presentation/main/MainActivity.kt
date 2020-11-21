@@ -26,8 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), HasAndr
     override val layoutId: Int
         get() = R.layout.activity_main
 
-    val MULTIPLE_PERMISSIONS = 10
-
     private var permissions = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.CAMERA,
@@ -55,7 +53,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), HasAndr
             ActivityCompat.requestPermissions(
                 this,
                 listPermissionsNeeded.toTypedArray(),
-                MULTIPLE_PERMISSIONS
+                    MULTIPLE_PERMISSIONS
             )
             return false
         }
@@ -83,6 +81,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), HasAndr
                 return
             }
         }
+    }
+
+    companion object {
+        private const val MULTIPLE_PERMISSIONS = 10
     }
 
 }

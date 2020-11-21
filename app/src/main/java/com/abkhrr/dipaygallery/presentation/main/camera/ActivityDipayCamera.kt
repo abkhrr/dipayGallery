@@ -25,7 +25,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.abkhrr.dipaygallery.BR
 import com.abkhrr.dipaygallery.R
 import com.abkhrr.dipaygallery.databinding.ActivityDipayCameraBinding
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 import com.abkhrr.dipaygallery.factory.ViewModelFactory
 import com.abkhrr.dipaygallery.presentation.base.BaseActivity
 import com.abkhrr.dipaygallery.presentation.main.shared.SharedViewModel

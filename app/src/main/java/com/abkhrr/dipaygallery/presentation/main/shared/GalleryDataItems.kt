@@ -2,7 +2,6 @@ package com.abkhrr.dipaygallery.presentation.main.shared
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
 
 class GalleryDataItems (
     val id: Int,

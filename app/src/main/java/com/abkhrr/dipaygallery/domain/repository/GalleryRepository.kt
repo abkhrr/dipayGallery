@@ -3,8 +3,7 @@ package com.abkhrr.dipaygallery.domain.repository
 import androidx.lifecycle.LiveData
 import com.abkhrr.dipaygallery.data.GalleryDataSource
 import com.abkhrr.dipaygallery.data.database.AppDatabase
-import com.abkhrr.dipaygallery.domain.dto.GalleryResult
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 import javax.inject.Inject
 
 class GalleryRepository @Inject constructor(private val mAppDatabase: AppDatabase) : GalleryDataSource {

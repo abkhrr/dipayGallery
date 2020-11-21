@@ -2,7 +2,7 @@ package com.abkhrr.dipaygallery.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 
 @Dao
 interface GalleryDao {

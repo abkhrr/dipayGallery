@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.abkhrr.dipaygallery.databinding.GalleryHomeListBinding
 import com.abkhrr.dipaygallery.databinding.ItemEmptyViewBinding
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 import com.abkhrr.dipaygallery.presentation.base.BaseRecyclerViewAdapter
 import com.abkhrr.dipaygallery.presentation.base.BaseViewHolder
 import com.abkhrr.dipaygallery.presentation.main.home.HomeClickListener

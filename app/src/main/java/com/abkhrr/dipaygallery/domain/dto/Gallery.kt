@@ -1,4 +1,4 @@
-package com.abkhrr.dipaygallery.domain.dto.db
+package com.abkhrr.dipaygallery.domain.dto
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

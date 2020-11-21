@@ -5,8 +5,6 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.abkhrr.dipaygallery.presentation.base.BaseRecyclerViewAdapter
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import java.io.File
 
 object BindingUtils {
     @Suppress("UNCHECKED_CAST")
@@ -26,15 +24,6 @@ object BindingUtils {
     fun setImageUrl(imageView: ImageView, url: String?) {
         Glide.with(imageView.context)
             .load(url)
-            .into(imageView)
-    }
-
-    @JvmStatic
-    @BindingAdapter("imageUrlCrop")
-    fun setImageUrlCrop(imageView: ImageView, url: String?) {
-        Glide.with(imageView.context)
-            .load(url)
-            .apply(RequestOptions.circleCropTransform())
             .into(imageView)
     }
 }

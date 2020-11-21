@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.abkhrr.dipaygallery.BR
 import com.abkhrr.dipaygallery.R
 import com.abkhrr.dipaygallery.databinding.FragmentHomeBinding
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 import com.abkhrr.dipaygallery.factory.ViewModelFactory
 import com.abkhrr.dipaygallery.presentation.base.BaseFragment
 import com.abkhrr.dipaygallery.presentation.base.NavigationCommand

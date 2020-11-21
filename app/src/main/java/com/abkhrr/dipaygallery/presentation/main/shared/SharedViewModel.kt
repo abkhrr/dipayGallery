@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.abkhrr.dipaygallery.data.GalleryDataSource
-import com.abkhrr.dipaygallery.domain.dto.db.Gallery
+import com.abkhrr.dipaygallery.domain.dto.Gallery
 import kotlinx.coroutines.launch
 
 class SharedViewModel(private val galleryDataSource: GalleryDataSource) : ViewModel() {
